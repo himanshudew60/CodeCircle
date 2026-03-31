@@ -1,0 +1,145 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* 🌌 Global background */
+body {
+  font-family: Arial, sans-serif;
+  background: url('/codecircle_bg.jpg') center/cover no-repeat fixed;
+  color: white;
+}
+
+/* layout */
+.container-fluid {
+  min-height: 100vh;
+}
+
+/* ✅ NAVBAR */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 15px 40px;
+
+  backdrop-filter: blur(12px);
+  background: rgba(0, 0, 0, 0.3);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* logo */
+.nav-logo img {
+  height: 50px;
+}
+
+/* nav links */
+.nav-links {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+}
+
+.nav-links a {
+  position: relative;
+  color: white;
+  text-decoration: none;
+  padding: 5px 0;
+  transition: color 0.3s ease;
+}
+
+/* underline hover */
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 1.5px;
+  background: white;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.nav-links a:hover {
+  color: #ddd;
+}
+
+/* 🌟 SECTIONS */
+.hero-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px;
+color: white;
+ 
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+/* fade in */
+.hero-section.show {
+ 
+  transform: translateY(0);
+}
+
+/* section divider */
+.hero-section:not(:last-child) {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* content */
+.content h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.content p {
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+/* 🧭 scroll offset */
+section {
+  scroll-margin-top: 80px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* 🔘 simple professional button */
+.btn {
+  display: inline-block;
+  padding: 10px 24px;
+  color: white;
+  text-decoration: none;
+  border: 1px solid white;
+  border-radius: 4px;
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  background: white;
+  color: #0b1a2f;
+}
+
+/* 📌 FOOTER */
+.footer {
+  color: white;
+  text-align: center;
+  padding: 12px;
+  font-size: 14px;
+  background: rgba(0, 0, 0, 0.4);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}

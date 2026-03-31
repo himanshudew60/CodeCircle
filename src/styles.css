@@ -1,0 +1,7 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: url('/codecircle_bg.jpg') center/cover no-repeat fixed;
+  /* 🔥 fixed makes it stay while scrolling */
+}
