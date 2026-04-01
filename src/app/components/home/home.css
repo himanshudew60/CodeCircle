@@ -75,39 +75,148 @@ body {
 
 /* 🌟 SECTIONS */
 .hero-section {
-  min-height: 100vh;
-  display: flex;
+  min-height: 87vh;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 40px;
-color: white;
- 
+  padding: 30px;
+  color: white;
+  border: 2px solid white;
   transform: translateY(40px);
   transition: all 0.8s ease;
 }
+.hero-section .title {
+  border: 2px solid white;
+  display: flex;
+  padding: 10px;
+  align-items: start;
+   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+   
+}
+.hero-section .content {
+  border: 2px solid white;
+}
+.about {
+  display: flex;
+  gap: 20px;
+  padding: 30px;
+}
+.about .data{
+  border: 2px solid white;
+  width: 50%;
+  padding: 20px;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.about .image{
+  border: 2px solid white;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+  width: 50%;
+  padding: 30px ;
+}
+.about .image img{
+  width: 90%;
+  height: auto;
+  border-radius: 20px;
+}
 
+.services .data {
+  border: 2px solid white;
+  width: 100%;
+  padding: 20px;
+  min-height: 100px;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.services .icons {
+  border: 2px solid white;
+  height: 20%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 50px;
+}
+.icons .icon img {
+ 
+  width: 100px;
+  height: 100px;
+ 
+}
+.icons .icon img:hover  {
+  transition: all 0.7s ease;
+  width: 130px;
+  height: 130px;
+ 
+}
+.hero-section .projects{
+  border: 2px solid white;
+  padding: 50px;
+}
+.corosal-img {
+  width: 100%;
+  height: 300px;
+  
+  object-fit: cover;
+  border-radius: 20px;
+}
+.hero-section .circle .data{
+  border: 2px solid white;
+  height: 100px;
+}
+
+.hero-section .circle .people{
+  border: 2px solid white;
+  padding: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap:20px
+}
+
+.hero-section .contact{
+  display: flex;
+
+}
+.hero-section .contact .data{
+  border: 2px solid white;
+  width: 50%;
+  padding: 20px;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.hero-section .contact .form{
+  border: 2px solid white;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+  width: 50%;
+  padding: 30px ;
+
+}
+
+.carousel-caption {
+  background: rgba(0,0,0,0.5);
+  padding: 10px 20px;
+  border-radius: 10px;
+}
 /* fade in */
 .hero-section.show {
- 
   transform: translateY(0);
 }
 
-/* section divider */
-.hero-section:not(:last-child) {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-}
 
-/* content */
-.content h1 {
-  font-size: 48px;
-  margin-bottom: 20px;
-}
-
-.content p {
-  max-width: 600px;
-  margin: 20px auto;
-}
 
 /* 🧭 scroll offset */
 section {
@@ -138,8 +247,9 @@ html {
 .footer {
   color: white;
   text-align: center;
-  padding: 12px;
+  padding: 9px;
   font-size: 14px;
   background: rgba(0, 0, 0, 0.4);
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
+
