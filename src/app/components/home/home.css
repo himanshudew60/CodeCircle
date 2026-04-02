@@ -196,7 +196,7 @@ body {
 }
 .about .data {
   text-align: left;
-  width: 50%;
+  width: 60%;
   flex-direction: column;
   display: flex;
   padding-top: 30px;
@@ -352,19 +352,137 @@ color: white;
 
 
 
-/* ------------------------ */
+/* ------------------------------- 🌟 PROJECTS SECTIONS  -------------------------------*/
 
-.hero-section .projects {
-  border: 2px solid white;
-  padding: 50px;
+/* WRAPPER */
+.projects-wrapper {
+  position: relative;
+  padding: 20px 0;
 }
-.corosal-img {
-  width: 100%;
-  height: 300px;
+.hero-section .project{
+  display: flex;
+justify-content: space-around ;
+align-items: center ;
+text-align: left  ;
+}
 
-  object-fit: cover;
+/* CARD */
+.project-card {
+  margin-top: 20px;
+  min-width: 400px;
+  max-width: 400px;
+  background: rgba(30, 41, 59, 0.8);
   border-radius: 20px;
+  overflow: hidden;
+  flex-shrink: 0;
+  transition: all 0.35s ease;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.08);
 }
+
+/* IMAGE */
+.project-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+/* BODY */
+.project-body {
+  padding: 18px;
+}
+
+.project-body h5 {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+
+.project-body p {
+  font-size: 0.85rem;
+  color: #cbd5e1;
+}
+
+/* TECH TAGS */
+.tech-stack {
+  margin: 12px 0;
+}
+
+.tech-stack span {
+  display: inline-block;
+  background: rgba(255,255,255,0.08);
+  padding: 5px 10px;
+  margin: 3px;
+  border-radius: 8px;
+  font-size: 0.7rem;
+}
+
+/* LINKS */
+.project-links .btn {
+  margin-right: 8px;
+  font-size: 0.8rem;
+}
+
+/* 🔥 HOVER EFFECT */
+.project-card:hover {
+
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+    border-color: transparent;
+    background: linear-gradient(to right, #60a5fa, #a78bfa);
+  -webkit-background-clip: text;
+  
+
+}
+
+/* GRADIENT BORDER ON HOVER */
+.project-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  padding: 1px;
+  background: linear-gradient(to right, #60a5fa, #a78bfa);
+  -webkit-mask: 
+    linear-gradient(#000 0 0) content-box, 
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.project-card:hover::before {
+  opacity: 1;
+  
+}
+
+/* SCROLL BUTTONS */
+.scroll-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,0.1);
+  border: none;
+  color: #fff;
+  font-size: 20px;
+  padding: 10px 14px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.scroll-btn.left {
+  left: -10px;
+}
+
+.scroll-btn.right {
+  right: -10px;
+}
+
+.scroll-btn:hover {
+  background: linear-gradient(to right, #60a5fa, #a78bfa);
+}
+
+/* -------------------------------- */
 .hero-section .circle .data {
   border: 2px solid white;
   height: 100px;
